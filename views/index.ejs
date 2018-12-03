@@ -1,55 +1,63 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
-		
-		<title>홈 화면</title>
-		
-		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
-    	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
-    	
-    	<style>
-        	body { padding-top:80px; }
-        	
-			@font-face {
-				font-family: 'Nanum Gothic'; font-style: normal; font-weight: 400;
-				src: url('../public/NanumGothic-Regular.eot');
-				src: local('NanumGothic'),
-					url('../public/NanumGothic-Regular.eot?#iefix') format('embedded-opentype'),
-					url('../public/NanumGothic-Regular.woff2') format('woff2'),
-					url('../public/NanumGothic-Regular.woff') format('woff'),
-					url('../public/NanumGothic-Regular.ttf') format('truetype');
-			}
-        	
-        	h1, p, a { font-family: 'Nanum Gothic' }
-    	</style>
-    
-	</head>
-	<body>
-        
+    <head>
+    <% include ./templete/head.ejs %>
+    </head>
+    <body>
         <% include ./templete/header.ejs %>
+
+        <!-- visual Image start -->
+        <section id="section-header" class="business-header">
+            <div class="container">
+                <div class="text-grp">
+                    <h2 class="text-df text-bold">가장 손쉽게 만나는 금융정보</h2>
+                    <h2 class="text-xlg text-bold">코스콤 기업주가 & 금융정보 서비스</h2>
+                    <h3 class="text-df text-bold text-color-bright">Koscom Cyber IR & Market Data Services</h3>
+                </div>
+            </div>
+
+        </section>
+        <!-- visual Image end --> 
+
+        <!-- intro start -->
+        <section id="section-intro">
+            <div class="container">
+                <h2 class="section-title text-lg">Intro</h2>
+                <div class="text-xs">
+                    거래소 시장 전산업무를 담당하고 종합금융정보를 제공하는 자본시장 IT 솔루션 리더인 코스콤에서 제공하는 <span class="text-xs text-bold">기업주가 & 금융정보 서비스</span>는 상장기업의 <span class="text-xs text-bold">온라인 IR</span>에 필요한 다양한 금융정보를 <span class="text-xs text-bold">HTML, XML, JSON, CSV 등 다양한 포맷</span>과 <span class="text-xs text-bold">Web, E-Mail, OPENAPI 방식</span> 등 다양한 채널을 통해 제공합니다.</div>
+                    <div class="intro-example">
+                        <div class="col-md-6 col-sm-6 col-xs-12"><iframe id="iframe-intro-example1" src="http://cyberir.koscom.co.kr/cyberir/main.do?custId=034020&pagePart=2" width="100%" height="100%" frameborder="0" scrolling="no"></iframe></div>
+                        <div class="col-md-6 col-sm-6 col-xs-12"><iframe id="iframe-intro-example2" src="http://cyberir.koscom.co.kr/cyberir/main.do?custId=asiatimes" height="100%" frameborder="0" scrolling="no"></iframe></div>
+                    </div>
+            </div>
+        </section>
+        <!-- intro end --> 
         
-		<div class="container">
-		    <div class="jumbotron text-center">
-		        <h2><span class="fa fa-shopping-cart"></span> K-Board</h2>
-				<br>
-				<% if (login_success) { %>
-					<p>로그인되어 있습니다.</p>
-					<br>
-					<a href="/logout" class="btn btn-default"><span class="fa fa-user"></span>로그아웃</a>
-				<% } else { %>
-					<p>로그인하세요.<p>
-					<p>계정이 없으시면 회원가입하세요.</p>
-					<br>
-			        <a href="/login" class="btn btn-default"><span class="fa fa-user"></span>로그인</a>
-			        <a href="/signup" class="btn btn-default"><span class="fa fa-user"></span>회원가입</a>
-					<br>
-					<a href="/auth/facebook" class="btn btn-primary"><span class="fa fa-facebook"></span> 페이스북으로 로그인</a>
-				<% } %>
-				
-		    </div>
-		
-		</div>
-	</body>
+        <section id="section-features" name="section-features">
+            <div class="container">
+                <h2 class="section-title text-lg">Features</h2>
+                <div class="text-xs">
+                    <br>Features<br>
+                </div>
+            </div>
+        </section>
+
+        <section id="section-services" name="section-services">
+            <div class="container">
+                <h2 class="section-title text-lg">Services</h2>
+                <div class="text-xs">
+                    <br>Services<br>
+                </div>
+            </div>
+        </section>
+
+           <section id="section-customers" name="section-customers">
+            <div class="container">
+                <h2 class="section-title text-lg">Customers</h2>
+                <div class="text-xs">
+                    <br>Customers<br>
+                </div>
+            </div>
+        </section>
+    </body>
 </html>

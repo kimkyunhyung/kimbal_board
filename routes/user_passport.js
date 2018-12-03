@@ -25,6 +25,54 @@ module.exports = function(router, passport) {
         }
     });
     
+    // 로그인(초기화면-id/facebook/가입) 화면
+    router.route('/login_portal').get(function(req, res) {
+        console.log('/login_portal 패스 요청됨.');
+        // 인증 안된 경우
+        if (!req.user) {
+            console.log('사용자 인증 안된 상태임.');
+            res.render('login_portal.ejs', {login_success:false});
+        } else {
+            console.log('사용자 인증된 상태임.');
+            res.render('login_portal.ejs', {login_success:true});
+        }
+
+    });
+  
+  
+    ////////////////////////////////////////////////////////////////////////////
+    //게시판
+    router.route('/listpost').get(function(req, res) {
+        console.log('/listpost 패스 요청됨.');
+        // 인증 안된 경우
+        if (!req.user) {
+            console.log('사용자 인증 안된 상태임.');
+            res.render('listpost.ejs', {login_success:false, title:'WORK'});
+        } else {
+            console.log('사용자 인증된 상태임.');
+            res.render('listpost.ejs', {login_success:true, title:'WORK'});
+        }
+
+    });
+
+    router.route('/addpost').get(function(req, res) {
+        console.log('/addpost 패스 요청됨.');
+        // 인증 안된 경우
+        if (!req.user) {
+            console.log('사용자 인증 안된 상태임.');
+            res.render('addpost.ejs', {login_success:false, title:'WORK'});
+        } else {
+            console.log('사용자 인증된 상태임.');
+            res.render('addpost.ejs', {login_success:true, title:'WORK'});
+        }
+
+    });
+    ////////////////////////////////////////////////////////////////////////////
+
+  
+  
+  
+  
     // 로그인 화면
     router.route('/login').get(function(req, res) {
         console.log('/login 패스 요청됨.');

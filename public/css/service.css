@@ -1,0 +1,113 @@
+html, body {width:100%;height:100%;margin:0;padding:0;font-family: 'lato', 'malgun-gothic', sans-serif;color:#222;font-size:16px; word-wrap:break-word;}
+* {box-sizing: border-box;}
+div, ul, ol, li, dl, dt, dd, p {margin:0;padding:0;list-style: none;}
+a:link, a:active, a:focus, a:visited {text-decoration: none;}
+h1, h2, h3, h4, h5, h6 {display: block;margin:0;padding:0;}
+img {border: :0;}
+em {font-style: normal;}
+header, section, footer, nav {display: block;margin: 0;padding: 0;}
+
+header {position:fixed;top:0;width:100%;background:#222;height:70px;z-index: 999;}
+header h1 {margin:21px 0 0 15px;float:left;}
+
+/*nav {position:fixed;left:0;top:70px;background:#595959;width:200px;height: 100%;z-index: 9999;}
+section {position:relative;top:70px;margin:0 0 50px 200px;padding:40px 50px 0;height: 100%;}*/
+
+nav {position:fixed;top:70px;background:#595959;min-width:170px;height: 100%;z-index: 9999;}
+section {position:relative;top:70px;padding:36px 20px 40px 200px;width:100%;height: 100%;}
+
+nav>div {color:#d9d9d9;font-size:0.8rem;font-weight:bold;border-bottom:1px solid #434343;}
+nav>div>span {display: block;padding:15px 0 0 20px;min-height:50px;cursor: pointer }
+nav>div>span:hover, nav>div.active span {background:#ed6d1e;color:#FFF;}
+nav>ul {border-bottom:1px solid #434343;}
+nav ul>li {color:#d9d9d9;font-size:0.8rem;text-indent:35px;min-height:35px;line-height:35px;font-weight: normal;cursor: pointer}
+nav ul>li:hover, nav ul>li.active {color:#FFF;background:#434343 url(/images/main/nav-ico.gif) 25px 11px no-repeat;}
+
+section>h2 {display:inline-block;font-size:1.875rem;color:#585657;padding-bottom:3px;border-bottom:2px solid #ed6d1e;margin-bottom:40px;}
+#div-customized2, #div-customized3 {display:none;background:#f7f7f7;border: 1px solid #d8d8d8;}
+
+#div-market-data {display: none;}
+.tbl {border-collapse: collapse;width:100%;border-top:2px solid #4e73aa;border-bottom:1px solid #d1d1d1;}
+.tbl th:first-child, .tbl td:first-child {border-left:none;}
+.tbl .not-first-child {border-left:1px solid #d1d1d1 !important;}
+.tbl th, .tbl td {border-left:1px solid #d1d1d1;border-top:1px solid #d1d1d1;font-size: 0.875rem;padding:12px 13px 14px;}
+.tbl thead th {background:#f6f8fa;}
+.tbl th {background:#fafafa;}
+
+.tbl a:link, .tbl a:visited {text-decoration: underline;color:#007ab9;}
+.tbl a:hover {color:#0011b9;}
+
+#div-market-data dl.market-data-fr {display:table;background:#f5f5f5;border:1px solid #dbdbdb;margin:0 0 20px 0;width: 100%;height:110px;box-sizing: border-box;}
+#div-market-data dl.market-data-fr .bg1 {background:url(/images/main/bg01.gif);}
+#div-market-data dl.market-data-fr .bg2 {background:url(/images/main/bg02.gif);}
+#div-market-data dl.market-data-fr dt {display:table-cell;border-radius: 0;height:110px;min-width:18%;;width:18%;margin:0;padding:30px 10px 0;font-size:1rem;}
+#div-market-data dl.market-data-fr dt span {display:block;font-size:0.9rem;}
+#div-market-data dl.market-data-fr dd {display:table-cell;padding:10px;margin:0;font-weight: normal;line-height: 1.6em;height:100%;width:80%;vertical-align: top;}
+#div-market-data dl.market-data-fr dd img {float: left;padding:0 20px 0 10px;}
+#div-market-data dl.market-data-fr dd * {vertical-align: top;}
+
+#div-market-data dl {margin-top:30px;display:block;background:#f1f1f1;font-size:0.875rem;overflow: hidden;}
+#div-market-data dl dt, #div-market-data dl dd {float:left;padding:10px 0 12px;font-weight:bold;}
+#div-market-data dl dt {background:#335484;border-radius: 5px;float:left;min-width:180px;text-align:center;color:#FFF;}
+#div-market-data dl dd {margin:0 10px 0 20px;}
+#div-market-data dl dd tel {display: inline-block;background:url(/images/main/ico-tel.png) 0 1px no-repeat;text-indent: 20px;margin-left:10px;font-weight:normal;}
+
+.navbar-toggle {position: relative;float: right;padding:5px;margin:26px 10px 18px 0;background-color: transparent;background-image: none;border: 1px solid transparent;}
+.navbar-toggle:focus {outline: 0;}
+.navbar-toggle .icon-bar {display: block;width: 20px;height:3px;border-radius:1px;}
+.navbar-toggle .icon-bar+.icon-bar {margin-top:4px;}
+.navbar-toggle {border-color:none;}
+.navbar-toggle:focus, .navbar-toggle:hover {border-color:#ec6d1e}
+.navbar-toggle .icon-bar {background-color: #ec6d1e;}
+.collapse {display: none}
+.collapse.in {display: block}
+.navbar-collapse {overflow: visible;}
+.navbar-collapse.in {overflow-y: auto}
+.sr-only {position: absolute;width: 1px;height: 1px;padding: 0;margin: -1px;overflow: hidden;clip: rect(0,0,0,0);border: 0}
+
+[data-toggle=buttons]>.btn input[type=checkbox], [data-toggle=buttons]>.btn input[type=radio], [data-toggle=buttons]>.btn-group>.btn input[type=checkbox], [data-toggle=buttons]>.btn-group>.btn input[type=radio] 
+{position:absolute;clip:rect(0,0,0,0);pointer-events:none}
+
+@media screen and (max-width:767px) {
+    html, body {font-size:14px;}
+    header h1:after {content: "";}
+    nav {display: none;width:100%;height:auto;}
+    section {position:relative;top:70px;padding:36px 15px 40px;width:100%;height: 100%;}
+
+    nav>div {color:#d9d9d9;font-size:0.8rem;font-weight:bold;border-bottom:1px solid #434343;}
+    nav>div>span {display: block;padding:9px 0 0 20px;min-height:35px;cursor: pointer }
+    nav>div>span:hover, nav>div.active span {background:#ed6d1e;color:#FFF;}
+    nav>ul {border-bottom:1px solid #434343;}
+    nav ul>li {color:#d9d9d9;font-size:0.8rem;text-indent:35px;min-height:30px;line-height:30px;font-weight: normal;cursor: pointer}
+    nav ul>li:hover, nav ul>li.active {color:#FFF;background:#434343 url(/images/main/nav-ico.gif) 25px 9px no-repeat;}
+
+    section>h2 {display:inline-block;font-size:1.875rem;color:#585657;padding-bottom:3px;border-bottom:2px solid #ed6d1e;margin-bottom:40px;}
+    #div-customized2, #div-customized3 {display:none;background:#f7f7f7;border: 1px solid #d8d8d8;}
+
+    xmp {font-size:0.85rem;line-height: 1.8em;}
+
+    #div-market-data dl.market-data-fr {height:100%;min-height:110px;}
+    #div-market-data dl.market-data-fr dt {width:100%;padding:0;line-height:30px;height:30px;}
+    #div-market-data dl.market-data-fr dt span {display: inline-block;}
+    #div-market-data dl.market-data-fr dd {width:100%;}
+    
+    #div-market-data dl dt {width:100%;}
+    #div-market-data dl dd tel {height:20px;}
+
+}
+
+@media (min-width:768px) {
+    header h1:after {position:relative;bottom:5px;left:20px;content: "코스콤에서 제공하는";color:#949494;font-size:0.95rem;font-weight:normal;}
+    .navbar-toggle {display: none;}
+
+    .navbar-collapse {display: block!important;}
+    .navbar-collapse.in {overflow-y: visible}
+}
+
+@media (min-width:992px) {
+    header h1:after {position:relative;bottom:5px;left:20px;content: "코스콤에서 제공하는";color:#949494;font-size:0.95rem;font-weight:normal;}
+    
+}
+@media (min-width:1200px) {
+    header h1:after {position:relative;bottom:5px;left:20px;content: "코스콤에서 제공하는";color:#949494;font-size:0.95rem;font-weight:normal;}
+}
